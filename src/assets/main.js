@@ -21,7 +21,7 @@ function setHiddenFields(){
 
 function validateInput(input){
   if(input.length !== 4){
-    setMessage("Guesses must be exactly 4 characters long");
+    setMessage("Guesses must be exactly 4 characters long.");
     return false;
   }else
     setMessage("");
@@ -62,8 +62,13 @@ function getResults(input){
   }else if(correct !== 4){
     setMessage("Incorrect, try again.");
   }
-}
+  if (input == answer.value){
+    return true;
+  }else{
+    return false;
+  }
 
+}
 
 function guess(){
 
